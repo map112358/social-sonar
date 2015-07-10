@@ -76,8 +76,8 @@
 	  .style('opacity',function(d) {if((2*pi+lineAngle) - (d.polar[1]+5*pi*.5)%(2*pi) <= 2*pi) { return (2*pi-((2*pi+lineAngle) - (d.polar[1]+5*pi*.5)%(2*pi)))/(2*pi);}else return (2*pi-(lineAngle - (d.polar[1]+5*pi*.5)%(2*pi)))/(2*pi);})
 	  .on("click", function(d) {
 		window.open("http://twitter.com/"+d.user.screen_name+"/status/"+d.id);
-	  })
-	  .on("mouseover", function(d) {
+	  });
+	  /*.on("mouseover", function(d) {
 			if(tempDiv)
 				tempDiv.parentElement.removeChild(tempDiv);
 			tempDiv = document.createElement("div");
@@ -98,7 +98,7 @@
 	  })
 	  .on("mouseout", function(d) {
 			//tempDiv.parentElement.removeChild(tempDiv);
-	  });
+	  });*/
 	  
 	  circ.append("svg:title")
 		.text(function (d) {
